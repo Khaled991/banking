@@ -2,6 +2,15 @@
 
 Welcome to the React Native Banking App! This mobile banking application is built with React Native and TypeScript, providing users with a seamless banking experience on their mobile devices.
 
+# Table of Contents
+
+1. [Features](#features)
+2. [Folder Structure](#folder-structure)
+3. [To-Do](#to-do)
+4. [Installation](#installation)
+5. [Getting Started](#getting-started)
+6. [Technologies Used](#technologies-used)
+
 ## Features
 
 - **Authentication**: Users can securely sign in and sign up for their accounts.
@@ -35,7 +44,7 @@ Welcome to the React Native Banking App! This mobile banking application is buil
 └───utils
 ```
 
-## To-Do
+### To-Do
 
 - [x] Authentication
   - [x] Sign In
@@ -88,11 +97,3 @@ npm start
 - TypeScript
 - React Navigation
 - etc.
-
-## Contributing
-
-Contributions are welcome! Please follow the [Contributing Guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
