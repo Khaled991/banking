@@ -40,10 +40,16 @@ const createUser = async (email: string, password: string): Promise<User> => {
   return newUser;
 };
 
+const isUserAuthenticated = async (): Promise<boolean> => {
+  await delay(1000);
+  return Math.random() >= 0.5;
+};
+
 const UserService = {
   getUserByEmailAndPassword,
   getUserByEmail,
   createUser,
+  isUserAuthenticated,
 };
 
 export default UserService;

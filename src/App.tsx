@@ -4,15 +4,17 @@ import Loader from './components/Common/Loader';
 import AppNavigator from './components/Navigation/AppNavigator';
 import AuthNavigator from './components/Navigation/AuthNavigator';
 import {NavigationContainer} from '@react-navigation/native';
+// import useUserAuthenticated from './hooks/useUserAuthenticated';
+import useSignIn from './hooks/useSignIn';
 
 const App: React.FC = () => {
-  const isAuthenticated = false;
+  const {isSignedIn} = useSignIn();
 
   return (
     <NavigationContainer>
       <Suspense fallback={<Loader size="large" />}>
         <View style={{flex: 1}}>
-          {isAuthenticated ? <AppNavigator /> : <AuthNavigator />}
+          {isSignedIn ? <AppNavigator /> : <AuthNavigator />}
         </View>
       </Suspense>
     </NavigationContainer>

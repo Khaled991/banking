@@ -6,6 +6,7 @@ const useSignIn = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const [isSignedIn, setIsSignedIn] = useState<boolean>(false);
 
   const handleEmailChange = (text: string) => setEmail(text);
   const handlePasswordChange = (text: string) => setPassword(text);
@@ -15,8 +16,8 @@ const useSignIn = () => {
       setLoading(true);
       const user = await AuthService.signIn(email, password);
       if (user) {
-        console.log('User found:', user);
-        // Proceed with sign-in logic
+        // TODO: save the token if the user is authenticated
+        setIsSignedIn(true);
       }
     } catch (error) {
       if (isError(error)) {
@@ -35,6 +36,7 @@ const useSignIn = () => {
     handleEmailChange,
     handlePasswordChange,
     onSignIn,
+    isSignedIn,
   };
 };
 

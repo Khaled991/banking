@@ -11,7 +11,6 @@ const SignInScreen: React.FC = () => {
     loading,
     handleEmailChange,
     handlePasswordChange,
-
     onSignIn,
   } = useSignIn();
 
